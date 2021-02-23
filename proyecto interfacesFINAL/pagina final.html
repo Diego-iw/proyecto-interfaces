@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+    body{
+        height:100vh ;
+        width:100vw ;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: 80% 20% ;
+        grid-template-rows: 200px 50px auto 60px;
+        background-color:  #48D9D1;
+        font-family: 'Quicksand', sans-serif;
+    }
+    header{
+        grid-row: 1/2;
+        grid-column: 1/3;
+        background-image:url("biblio.jpg");
+        display: flex;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-position: 0 -100px;
+        width: 100vw;
+
+    }
+    #myTopnav{
+        grid-row: 2/3;
+        grid-column: 1/3;
+        
+    }
+    main{
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+    aside{
+        grid-row: 3/4;
+        grid-column: 2/3;
+        margin: 10px;
+    }
+    footer{
+        grid-row: 4/5;
+        grid-column: 1/3;
+    }
+    .noti{
+            height: 100px;
+            width: 100px ;
+            float: left;
+        }
+        article{
+            border-bottom: 3px solid black;
+            margin-bottom: 30px;
+        }
+        .topnav {
+  overflow: hidden;
+  background-color: #4893D9;
+  width: 100vw;
+}
+        .topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #527BF7;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #527BF7;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+  margin-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+  #iniciotext {
+      display: none;
+  }
+  body{
+      grid-template-columns:100% !important ;
+      grid-template-rows: 200px 50px auto auto 60px !important;
+      
+  }
+  h1{
+      font-size: 30px !important;
+  }
+  header{
+        grid-row: 1/2;
+       
+       
+
+    }
+    #myTopnav{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    main{
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+    aside{
+        grid-row: 4/5;
+        grid-column: 1/2;
+    }
+    footer{
+        grid-row: 5/6;
+        grid-column: 1/2;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #527BF7;
+}
+#icono{
+    height:150px;
+    width: 170px;
+    margin: 15px;
+}
+h1{
+    color: orange; 
+    text-align: center;
+    font-size: 3em;
+    align-self: center;
+}
+
+#cajabuscar,#iniciotext{
+    float: right;
+    margin-right: 10px;
+}
+input{
+    margin-top: 13px;
+}
+main{
+    border: 3px solid black;
+    margin :30px;
+    background: url("muro.jpg")no-repeat;
+    background-position: 0 -200px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto 10px;
+    grid-template-rows: auto 50px;
+    
+}
+
+/* main{
+    display: flex;
+    
+   
+} */
+p,h2{
+    margin: 10px;
+}
+video{
+    width: 100%;
+    max-width: 720px;
+   
+    margin-right: 10px;
+}
+#parrafodes{
+    width: 100%;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    background-color:rgba(255, 255, 255, 0.664);
+    padding: 10px;
+    margin-right: 30px;
+    
+}
+#educa,#junta{
+    width: 100%;
+    max-width: 150px;
+    max-height: 60px;
+}
+
+#barra{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+}
+
+       </style>
+</head>
+
+<body>
+    <header><a href="pagina final.html"><img src="icono.png" id="icono"></a>
+        <h1>CENTRO INTEGRADO FP DIEGO</h1></header>
+      
+        <div class="topnav" id="myTopnav">
+            <a href="" class="active">INICIO</a>
+            <a href="">NOTICIAS</a>
+            <a href="">CONTACTO</a>
+            <a href="">AYUDA</a>  
+             <a href="" class="icon">
+              <i class="fa fa-bars"></i>
+            </a>
+            <a href="" id="iniciotext">Inicio sesion  <img src="usuario.png" id="inicio"></a>
+            <div id="cajabuscar"><input type="search" id="buscar" name="buscar"><img src="lupa.png" id="lupa"></div>
+            
+           
+          
+          </div>
+<main >
+    
+
+  
+
+<div id="parrafodes">      <video width="720" height="480" controls>
+  <source src="videolib.mp4" type="video/mp4">
+  
+Your browser does not support the video tag.
+</video>
+<div id="publicacion">
+    <h2>PUBLICACIONES DESTACADAS</h2>
+<p >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ullam, delectus dolores iste velit, eligendi repellendus quaerat fuga blanditiis a soluta repudiandae aspernatur omnis accusamus perferendis dolor amet impedit porro.
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ullam, delectus dolores iste velit, eligendi repellendus quaerat fuga blanditiis a soluta repudiandae aspernatur omnis accusamus perferendis dolor amet impedit porro.
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ullam, delectus dolores iste velit, eligendi repellendus quaerat fuga blanditiis a soluta repudiandae aspernatur omnis accusamus perferendis dolor amet impedit porro.
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi ullam, delectus dolores iste velit, eligendi repellendus quaerat fuga blanditiis a soluta repudiandae aspernatur omnis accusamus perferendis dolor amet impedit porro.
+</p>
+</div>
+</div>
+<div id="barra">
+    <img src="css_sprites.png">    
+       </div>
+    
+    
+</main>
+<aside>
+
+    <article><img src="noti.jpg" class="noti"> <p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></article>
+    <article><img src="noti.jpg" class="noti"> <p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></article>
+    <article><img src="noti.jpg" class="noti"> <p>lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p></article>
+
+</aside>
+<footer>
+    
+        <img src="educacyl.png" id="educa">
+        <a href="">Direccion</a>
+        <a href="">Aviso legal</a>
+        <img src="junta.png" id="junta">
+    
+</footer>
+</body>
+</html>
